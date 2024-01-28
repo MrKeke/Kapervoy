@@ -4,21 +4,9 @@ import 'react-multi-carousel/lib/styles.css'
 
 export const Home: React.FC = () => {
   const responsive = {
-    superLargeDesktop: {
+    all: {
       // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 4000, min: 0 },
       items: 1,
     },
   }
@@ -32,7 +20,7 @@ export const Home: React.FC = () => {
         className="w-full"
       >
         <div className="relative">
-          <img src="/CarouselIcons/Icon1.svg" alt="Rec" />
+          <img src="/CarouselIcons/Icon1.jpg" alt="Rec" />
           <div className="absolute top-[178px] left-[210px] z-10">
             <p className="text-[90px] font-[400px] tracking-[9px] leading-[87%] font-sans">
               Анонс новой
@@ -47,7 +35,7 @@ export const Home: React.FC = () => {
           </div>
         </div>
         <div>
-          <img src="/CarouselIcons/Icon3.svg" alt="Rec" />
+          <img src="/CarouselIcons/Icon3.jpg" alt="Rec" />
           <div className="absolute top-[178px] left-[210px] z-10">
             <p className="text-[90px] font-[400px] tracking-[9px] leading-[87%] font-sans">
               Зимняя <br /> коллекция
@@ -67,7 +55,7 @@ export const Home: React.FC = () => {
           </div>
         </div>
         <div>
-          <img className="blur-sm" src="/CarouselIcons/Icon2.svg" alt="Rec" />
+          <img className="blur-sm" src="/CarouselIcons/Icon2.jpg" alt="Rec" />
           <div className="absolute top-[178px] left-[210px] z-10">
             <p className="text-[90px] font-[400px] tracking-[9px] leading-[87%] font-sans">
               Получи скидку <br /> на первый заказ
@@ -85,6 +73,79 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </Carousel>
+      <>
+        <div className="mt-[60px] ml-[98px] flex flex-col ">
+          <p className="text-[40px]">Каталог Товаров</p>
+          <div className="flex items-center mt-[60px] text-white">
+            <div className="relative ">
+              <img src="/JPG/DSC_5138%206.jpg" alt="WomenCollection" />
+              <p className="absolute px-[77px] bottom-[26px] left-[180px] shadow-[#514A7E] shadow border border-[#514A7E] bg-[#514A7E] py-[23px] rounded-[20px]">
+                Женская коллекция
+              </p>
+            </div>
+            <div className="relative">
+              <img src="/JPG/DSC_5138%202.jpg" alt="MenCollection" />
+              <p className="absolute px-[77px] bottom-[26px] left-[180px] border border-white py-[23px] rounded-[20px]">
+                Мужская коллекция
+              </p>
+            </div>
+          </div>
+        </div>
+      </>
+
+      <>
+        <div className="flex items-center flex-col mt-[60px] ">
+          <p className="text-[40px] font-[400]">Как мы работаем</p>
+          <div className="flex mt-[38px] mx-[96px]">
+            <div className="flex flex-col gap-[20px] items-center justify-center text-center">
+              <img
+                className="w-[180px] h-[180px]"
+                loading="lazy"
+                src="/PNG/pocket.png"
+                alt="pocketIcon"
+              />
+              <p className="font-[600] text-[20px] leading-[160%]">
+                Оформление заказа
+              </p>
+              <p>Вы оставляете заявку на сайте или по телефону</p>
+            </div>
+            <div className="flex flex-col gap-[20px] items-center justify-center text-center">
+              <img
+                className="w-[180px] h-[180px]"
+                loading="lazy"
+                src="/PNG/phone.png"
+                alt="phoneIcon"
+              />
+              <p className="font-[600] text-[20px] leading-[160%]">
+                Подстверждение заказа
+              </p>
+              <p>Менеджер связывается с Вами для подтверждения заказа</p>
+            </div>
+            <div className="flex flex-col gap-[20px] items-center justify-center text-center">
+              <img
+                className="w-[180px] h-[180px]"
+                loading="lazy"
+                src="/PNG/track.png"
+                alt="trackIcon"
+              />
+              <p className="font-[600] text-[20px] leading-[160%]">Доставка</p>
+              <p>Мы быстро доставляем Вашу посылку по указанному адресу</p>
+            </div>
+            <div className="flex flex-col gap-[20px] items-center justify-center max-w-[216px] text-center">
+              <img
+                className="w-[180px] h-[180px]"
+                loading="lazy"
+                src="/PNG/bag.png"
+                alt="bagIcon"
+              />
+              <p className="font-[600] text-[20px] leading-[160%]">
+                Получение товара
+              </p>
+              <p>Любым для Вас удобным способом</p>
+            </div>
+          </div>
+        </div>
+      </>
     </>
   )
 }

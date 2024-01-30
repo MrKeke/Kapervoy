@@ -5,7 +5,6 @@ import 'react-multi-carousel/lib/styles.css'
 export const Home: React.FC = () => {
   const responsive = {
     all: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 0 },
       items: 1,
     },
@@ -17,7 +16,6 @@ export const Home: React.FC = () => {
         infinite={true}
         autoPlay={true}
         responsive={responsive}
-        className="w-full"
       >
         <div className="relative">
           <img src="/CarouselIcons/Icon1.jpg" alt="Rec" />

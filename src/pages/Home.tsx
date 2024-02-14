@@ -17,12 +17,12 @@ export const Home: React.FC = () => {
         className="w-full"
         autoPlaySpeed={10000}
         infinite={true}
-        autoPlay={true}
+        autoPlay={false}
         responsive={responsive}
       >
         <div className="relative">
-          <img src="/CarouselIcons/Icon1.jpg" alt="Rec" />
-          <div className="absolute top-[178px] left-[210px] z-10">
+          <img className="w-full" src="/CarouselIcons/Icon1.jpg" alt="Rec" />
+          <div className="absolute flex flex-col  justify-center  top-1/4 left-[210px] z-10">
             <p className="text-[90px] font-[400px] tracking-[9px] leading-[87%] font-sans">
               Анонс новой
               <br /> коллекции
@@ -36,7 +36,7 @@ export const Home: React.FC = () => {
           </div>
         </div>
         <div>
-          <img src="/CarouselIcons/Icon3.jpg" alt="Rec" />
+          <img className="w-full" src="/CarouselIcons/Icon3.jpg" alt="Rec" />
           <div className="absolute top-[178px] left-[210px] z-10">
             <p className="text-[90px] font-[400px] tracking-[9px] leading-[87%] font-sans">
               Зимняя <br /> коллекция
@@ -56,7 +56,11 @@ export const Home: React.FC = () => {
           </div>
         </div>
         <div>
-          <img className="blur-sm" src="/CarouselIcons/Icon2.jpg" alt="Rec" />
+          <img
+            className="blur-sm w-full"
+            src="/CarouselIcons/Icon2.jpg"
+            alt="Rec"
+          />
           <div className="absolute top-[178px] left-[210px] z-10">
             <p className="text-[90px] font-[400px] tracking-[9px] leading-[87%] font-sans">
               Получи скидку <br /> на первый заказ
@@ -75,7 +79,7 @@ export const Home: React.FC = () => {
         </div>
       </Carousel>
       <>
-        <div className=" ml-[98px] flex flex-col ">
+        <div className=" ml-[98px]  flex flex-col ">
           <Title text={'Каталог товаров'} />
           <div className="flex items-center text-white">
             <div className="relative ">
@@ -148,7 +152,7 @@ export const Home: React.FC = () => {
         </div>
       </>
       <>
-        <div className="mt-[114px] bg-[#1F1E1E] text-[#FCF5D8] px-[100px] h-[776px] mb-[121px] flex gap-[47px] relative">
+        <div className="mt-[114px] justify-center bg-[#1F1E1E] text-[#FCF5D8] px-[100px] h-[776px] mb-[121px] flex gap-[47px] relative">
           <div style={{ transform: 'translateY(-54px)' }}>
             <img
               className="w-[620px] h-[830px]"
@@ -184,7 +188,7 @@ export const Home: React.FC = () => {
         <div className="flex flex-col gap-[14px] mx-[14px]text-black">
           <div
             style={{ backgroundImage: `url(/JPG/womanInMerch.jpg)` }}
-            className="w-[1424px] bg-center bg-no-repeat pl-[70px] pr-[72px] bg-cover pt-[24px] pb-[33px] flex flex-col items-start gap-[252px]  justify-between"
+            className="mx-[28px] bg-center bg-no-repeat pl-[70px] pr-[72px] bg-cover pt-[24px] pb-[33px] flex flex-col items-start gap-[252px]  justify-between"
           >
             <p className="text-3xl">Услуги</p>
             <button className="self-end border rounded-[20px] border-black py-[20px] px-[44px]">
@@ -193,7 +197,7 @@ export const Home: React.FC = () => {
           </div>
           <div
             style={{ backgroundImage: `url(/JPG/womanInMerch2.jpg)` }}
-            className="w-[1424px] bg-center bg-no-repeat pl-[70px] pr-[72px] bg-cover pt-[24px] pb-[33px] flex flex-col items-start gap-[252px]  justify-between"
+            className=" bg-center bg-no-repeat mx-[28px] pl-[70px] pr-[72px] bg-cover pt-[24px] pb-[33px] flex flex-col items-start gap-[252px]  justify-between"
           >
             <p className="text-3xl">Галерея</p>
             <button className=" text-white self-end border rounded-[20px] border-[#514A7E] py-[20px] px-[44px] bg-[#514A7E]">

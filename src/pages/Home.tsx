@@ -191,7 +191,7 @@ export const Home: React.FC = () => {
             </button>
           </div>
           <div
-            style={{ backgroundImage: `url(/JPG/WomanInMerch2.jpg)` }}
+            style={{ backgroundImage: `url(/JPG/womanInMerch2.jpg)` }}
             className="w-[1424px] bg-center bg-no-repeat pl-[70px] pr-[72px] bg-cover pt-[24px] pb-[33px] flex flex-col items-start gap-[252px]  justify-between"
           >
             <p className="text-3xl">Галерея</p>

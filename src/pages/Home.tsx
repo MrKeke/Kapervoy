@@ -14,6 +14,7 @@ export const Home: React.FC = () => {
   return (
     <>
       <Carousel
+        className="w-full"
         autoPlaySpeed={10000}
         infinite={true}
         autoPlay={true}

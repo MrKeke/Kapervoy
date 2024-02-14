@@ -210,7 +210,7 @@ export const Home: React.FC = () => {
         <div className="flex gap-[40px] items-center justify-center ">
           <FeedbackTicket
             description="Платье село отлично! Хороший материал. Буду заказывать еще, осталась очень довольна."
-            avatar="/JPG/WomanInMerch2.jpg"
+            avatar="/JPG/womanInMerch2.jpg"
             rate={4}
             name="Басков Олег"
             date="07.01.2004"

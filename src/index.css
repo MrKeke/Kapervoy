@@ -9,11 +9,10 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 1440px;
 }
 .inputFix,
 .inputFix:hover,
-.inputFix:focus
+.inputFix:focus,
 .inputFix:active{
   border-bottom-width: 0 !important;
   outline: none !important;

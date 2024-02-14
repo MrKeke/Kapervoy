@@ -9,7 +9,7 @@ export const Navbar: React.FC = () => {
     }
   }, [activeInput])
   return (
-    <nav className="bg-[#1F1E1E] px-24 pt-[59px] pb-[22px] w-full h-[120px] flex text-[#F6DBBB] text-xs">
+    <nav className="bg-[#1F1E1E] pt-[59px] pb-[22px] w-full h-[120px] items-center justify-center flex text-[#F6DBBB] text-xs">
       <img
         className="mr-[27px] mb-[12px] cursor-pointer"
         src="/logo.svg"

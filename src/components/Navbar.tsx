@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export const Navbar: React.FC = () => {
   const [inputValue, setInputValue] = useState('Поиск по каталогу')
@@ -8,32 +9,36 @@ export const Navbar: React.FC = () => {
       setInputValue('')
     }
   }, [activeInput])
+
   return (
-    <nav className="bg-[#1F1E1E] pt-[59px] pb-[22px] w-full h-[120px] items-center justify-center flex text-[#F6DBBB] text-xs">
-      <img
-        className="mr-[27px] mb-[12px] cursor-pointer"
-        src="/logo.svg"
-        alt="Логотип"
-      />
+    <nav className="bg-[#1F1E1E] 2xl:text-2xl  pt-[59px] pb-[22px] w-full h-[120px] items-center justify-center flex text-[#F6DBBB] text-xs">
+      <Link to="/">
+        <img
+          className="mr-[27px] mb-[12px] cursor-pointer"
+          src="/logo.svg"
+          alt="Логотип"
+        />
+      </Link>
       <div className="flex flex-row gap-[20px] items-center relative whitespace-nowrap">
-        <a href="#" className="cursor-pointer select-none">
+        <Link to="/about" className="cursor-pointer select-none">
           О нас
-        </a>
+        </Link>
         <a href="#" className="cursor-pointer select-none">
           Каталог
         </a>
-        <a href="#" className="cursor-pointer select-none">
+        <Link to="/conditions" className="cursor-pointer select-none">
           Условия сотрудничества
-        </a>
-        <a href="#" className="cursor-pointer select-none">
+        </Link>
+        <Link to="/payment" className="cursor-pointer select-none">
           Оплата
-        </a>
-        <a href="#" className="cursor-pointer select-none">
+        </Link>
+
+        <Link to="/delivery" className="cursor-pointer select-none">
           Доставка
-        </a>
-        <a href="#" className="cursor-pointer select-none">
+        </Link>
+        <Link to="/services" className="cursor-pointer select-none">
           Услуги
-        </a>
+        </Link>
         <a href="#" className="cursor-pointer select-none">
           Отзывы
         </a>
@@ -76,7 +81,7 @@ export const Navbar: React.FC = () => {
           <img src="/SVG/avatar.svg" alt="Кабинет" />
           <img src="/SVG/heart.svg" alt="Избранное" />
           <img src="/SVG/shopBag.svg" alt="Корзина" />
-          <p className="absolute text-[#FCF5D8] -right-2 top-0 text-[16px]">
+          <p className="absolute text-[#FCF5D8] -right-1 2xl:-top-3 top-0  2xl:text-xl text-[16px]">
             1
           </p>
         </div>

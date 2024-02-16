@@ -1,9 +1,19 @@
 export const Footer: React.FC = () => {
   return (
-    <div className="bg-[#1F1E1E] flex items-center justify-between text-[#F6DBBB] h-[188px] px-[108px]">
+    <div className="bg-[#1F1E1E] 2xl:text-xl flex items-center justify-between text-[#F6DBBB] h-[188px] px-[108px]">
       <div className="flex flex-col ">
         <p>© 2011–2024г Универ Клаб</p>
-        <p>
+        <p
+          className="cursor-pointer"
+          onClick={({ target }) => {
+            const p = target as HTMLElement
+            if (p.textContent) {
+              navigator.clipboard.writeText(p.textContent).catch((e) => {
+                console.log(e)
+              })
+            }
+          }}
+        >
           Москва, Озерковский переулок, 22/24с1
           <br />
           (м. Новокузнецкая).

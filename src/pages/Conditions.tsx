@@ -5,7 +5,7 @@ export const Conditions: React.FC = () => {
   return (
     <>
       <div className="flex flex-col justify-center px-[112px]">
-        <TitleBack title={'Услвоия сотруднечества'} />
+        <TitleBack title={'Условия сотрудничества'} />
 
         <div className="text-xl pb-[40px]">
           <p>

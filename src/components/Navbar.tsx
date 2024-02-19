@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export const Navbar: React.FC = () => {
-  const [inputValue, setInputValue] = useState('Поиск по каталогу')
-  const [activeInput, setActiveInput] = useState(false)
+  const [inputValue, setInputValue] = useState('')
 
   return (
     <nav className="bg-[#1F1E1E] 2xl:text-2xl  pt-[59px] pb-[22px] w-full h-[120px] items-center justify-center flex text-[#F6DBBB] text-xs">
@@ -54,9 +53,7 @@ export const Navbar: React.FC = () => {
             value={inputValue}
             type="text"
             placeholder="Поиск по каталогу"
-            className={`inputFix text-[15px] bg-[#1F1E1E] w-[166px] ${
-              !activeInput && 'text-gray-400'
-            }`}
+            className={"inputFix text-[15px] bg-[#1F1E1E] w-[166px]"}
             onChange={(e) => {
               setInputValue(e.target.value)
             }}

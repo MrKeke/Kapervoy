@@ -6,7 +6,6 @@ export const Conditions: React.FC = () => {
     <>
       <div className="flex flex-col justify-center px-[112px]">
         <TitleBack title={'Условия сотрудничества'} />
-
         <div className="text-xl pb-[40px]">
           <p>
             KAPERVOY — это те самые толстовки, о которых вы слышали. Зимой 2011
@@ -91,7 +90,12 @@ export const Conditions: React.FC = () => {
             крашения, поэтому толстовка не потеряет свой цвет после стирки.
             <br /> <br /> Как ухаживать за изделиями?
             <br />{' '}
-            <Link to="/recommendations">
+            <Link
+              onClick={() => {
+                window.scrollTo(0, 0)
+              }}
+              to="/recommendations"
+            >
               <u>Рекомендации по уходу</u>
             </Link>
             <br />

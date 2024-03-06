@@ -1,7 +1,7 @@
 export const Footer: React.FC = () => {
   return (
-    <div className="bg-[#1F1E1E] 2xl:text-xl flex items-center justify-between text-[#F6DBBB] h-[188px] px-[108px]">
-      <div className="flex flex-col ">
+    <div className="bg-[#1F1E1E] 2xl:text-xl relative h-44 flex items-center justify-center text-[#F6DBBB] py-4 px-[108px]">
+      <div className="flex flex-col absolute left-16">
         <p>© 2011–2024г Универ Клаб</p>
         <p
           className="cursor-pointer"
@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
       <div>
         <img src="/logo.svg" alt="logo" />
       </div>
-      <div className="flex flex-col ">
+      <div className="flex flex-col absolute right-16">
         <p>example@gmail.com</p>
         <p>+7 (920) 123-45-67</p>
       </div>

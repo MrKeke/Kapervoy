@@ -1,8 +1,9 @@
-import React from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
-import { FeedbackTicket } from '../components/FeedbackTicket'
+import { FeedbackTicket } from '../components/shared/FeedbackTicket'
 import { Title } from '../components/shared/Title'
+import { useEffect } from 'react'
+import { CustomButton } from '../components/shared/CustomButton'
 
 export const Home: React.FC = () => {
   const responsive = {
@@ -11,13 +12,19 @@ export const Home: React.FC = () => {
       items: 1,
     },
   }
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    return () => {
+      window.scrollTo(0, 0)
+    }
+  }, [])
   return (
     <>
       <Carousel
         className="w-full"
         autoPlaySpeed={10000}
         infinite={true}
-        autoPlay={false}
+        autoPlay={true}
         responsive={responsive}
       >
         <div className="relative">
@@ -84,15 +91,23 @@ export const Home: React.FC = () => {
           <div className="flex items-center text-white">
             <div className="relative ">
               <img src="/JPG/girlInWhite.jpg" alt="WomenCollection" />
-              <p className="absolute px-[77px] bottom-[26px] left-[180px] shadow-[#514A7E] shadow border border-[#514A7E] bg-[#514A7E] py-[23px] rounded-[20px]">
-                Женская коллекция
-              </p>
+              <CustomButton
+                otherClasses={
+                  'absolute text-black bottom-[26px] left-[180px]  hover:border-[#514A7E] hover:bg-[#514A7E] hover:text-white border-black px-[77px] py-[23px] '
+                }
+                text={'Женская коллекция'}
+                onClickFunction={() => {}}
+              />
             </div>
             <div className="relative">
               <img src="/JPG/manInBlack.jpg" alt="MenCollection" />
-              <p className="absolute px-[77px] bottom-[26px] left-[180px] border border-white py-[23px] rounded-[20px]">
-                Мужская коллекция
-              </p>
+              <CustomButton
+                otherClasses={
+                  'absolute text-white bottom-[26px] left-[180px]  hover:border-[#514A7E] hover:bg-[#514A7E] hover:text-black border-white px-[77px] py-[23px] '
+                }
+                text={'Мужская коллекция'}
+                onClickFunction={() => {}}
+              />
             </div>
           </div>
         </div>
@@ -101,8 +116,8 @@ export const Home: React.FC = () => {
       <>
         <div className="flex items-center flex-col ">
           <Title text={'Как мы работаем'} />
-          <div className="flex mt-[38px] mx-[96px]">
-            <div className="flex flex-col gap-[20px] items-center justify-center text-center">
+          <div className="flex gap-[80px] text-[20px] mt-[38px] mx-[96px]">
+            <div className="flex flex-col gap-[20px] pl-10 items-center justify-center text-center">
               <img
                 className="w-[180px] h-[180px]"
                 loading="lazy"
@@ -112,7 +127,10 @@ export const Home: React.FC = () => {
               <p className="font-[600] text-[20px] leading-[160%]">
                 Оформление заказа
               </p>
-              <p>Вы оставляете заявку на сайте или по телефону</p>
+              <p>
+                Вы оставляете заявку на сайте или по телефону и проводится
+                оплата
+              </p>
             </div>
             <div className="flex flex-col gap-[20px] items-center justify-center text-center">
               <img
@@ -191,18 +209,26 @@ export const Home: React.FC = () => {
             className="mx-[28px] bg-center bg-no-repeat pl-[70px] pr-[72px] bg-cover pt-[24px] pb-[33px] flex flex-col items-start gap-[252px]  justify-between"
           >
             <p className="text-3xl">Услуги</p>
-            <button className="self-end border rounded-[20px] border-black py-[20px] px-[44px]">
-              Перейти
-            </button>
+            <CustomButton
+              otherClasses={
+                'self-end border rounded-[20px] border-black py-[20px] px-[44px] hover:bg-[#514A7E] hover:border-[#514A7E] hover:text-white'
+              }
+              text={'Перейти'}
+              onClickFunction={undefined}
+            />
           </div>
           <div
             style={{ backgroundImage: `url(/JPG/womanInMerch2.jpg)` }}
             className=" bg-center bg-no-repeat mx-[28px] pl-[70px] pr-[72px] bg-cover pt-[24px] pb-[33px] flex flex-col items-start gap-[252px]  justify-between"
           >
             <p className="text-3xl">Галерея</p>
-            <button className=" text-white self-end border rounded-[20px] border-[#514A7E] py-[20px] px-[44px] bg-[#514A7E]">
-              Перейти
-            </button>
+            <CustomButton
+              otherClasses={
+                'self-end border rounded-[20px] border-black py-[20px] px-[44px] hover:bg-[#514A7E] hover:border-[#514A7E] hover:text-white'
+              }
+              text={'Перейти'}
+              onClickFunction={undefined}
+            />
           </div>
         </div>
       </>
@@ -230,9 +256,19 @@ export const Home: React.FC = () => {
         </div>
       </>
       <>
-        <div className="flex px-[109px] flex-col justify-center">
+        <div className="flex px-[109px] flex-col  justify-center">
           <Title text={'Контакты'} />
-          <p className="text-[20px] text-[#514A7E]  text-xl mb-[20px]">
+          <p
+            onClick={({ target }) => {
+              const p = target as HTMLElement
+              if (p.textContent) {
+                navigator.clipboard.writeText(p.textContent).catch((e) => {
+                  console.log(e)
+                })
+              }
+            }}
+            className="text-[20px] text-[#514A7E] cursor-pointer text-xl mb-[20px]"
+          >
             Адрес: Озерковская набережная, 22/24с1, Москва(магазин, склад и
             офис)
           </p>

@@ -1,8 +1,14 @@
-import type { Config } from 'tailwindcss'
+// @ts-check
+import { Config } from 'tailwindcss'
 
 const config: Config = {
   darkMode: ['class'],
-  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
   theme: {
     container: {
       center: true,
@@ -31,11 +37,15 @@ const config: Config = {
       },
       boxShadow: {
         primary: '0px 1px 4px 0px rgba(185, 219, 221, 0.50)',
-        secondary: '0px 2px 4px 0px #F6F5F8, 0px 1px 4px -2px rgba(24, 39, 75, 0.02)',
-        tooltip: '0px 4px 12px -2px rgba(28, 40, 64, 0.16), 0px 4px 8px -4px rgba(28, 40, 64, 0.02)',
-        card: '0px 0px 4px 0px rgba(0, 0, 0, 0.04), 0px 4px 16px 0px rgba(0, 0, 0, 0.02)',
+        secondary:
+          '0px 2px 4px 0px #F6F5F8, 0px 1px 4px -2px rgba(24, 39, 75, 0.02)',
+        tooltip:
+          '0px 4px 12px -2px rgba(28, 40, 64, 0.16), 0px 4px 8px -4px rgba(28, 40, 64, 0.02)',
+        card:
+          '0px 0px 4px 0px rgba(0, 0, 0, 0.04), 0px 4px 16px 0px rgba(0, 0, 0, 0.02)',
         modal: 'var(--shadow-modal-window)',
-        landingCard: '0px 8px 44px 0px rgba(0,0,0,0.05), 0px 4px 45.6px 0px rgba(16,29,39,0.02)',
+        landingCard:
+          '0px 8px 44px 0px rgba(0,0,0,0.05), 0px 4px 45.6px 0px rgba(16,29,39,0.02)',
       },
       fontSize: {
         'fz-h1': [
@@ -293,26 +303,45 @@ const config: Config = {
         'color-accent-180-day': 'var(--accent-180-day)',
         'color-accent-1100-day': 'var(--accent-1100-day)',
         'color-accent-1120-day': 'var(--accent-1120-day)',
-        'color-notifications-error-icons-day': 'var(--notifications-error-icons-day)',
-        'color-notifications-error-text-day': 'var(--notifications-error-text-day)',
+        'color-notifications-error-icons-day':
+          'var(--notifications-error-icons-day)',
+        'color-notifications-error-text-day':
+          'var(--notifications-error-text-day)',
         'color-notifications-error-bg-day': 'var(--notifications-error-bg-day)',
-        'color-notifications-success-icons-day': 'var(--notifications-success-icons-day)',
-        'color-notifications-success-text-day': 'var(--notifications-success-text-day)',
-        'color-notifications-success-bg-day': 'var(--notifications-success-bg-day)',
-        'color-notifications-warning-icons-day': 'var(--notifications-warning-icons-day)',
-        'color-notifications-warning-text-day': 'var(--notifications-warning-text-day)',
-        'color-notifications-warning-bg-day': 'var(--notifications-warning-bg-day)',
-        'color-notifications-link-text-day': 'var(--notifications-link-text-day)',
-        'color-additional-colors-skyre-text-day': 'var(--additional-colors-skyre-text-day)',
-        'color-additional-colors-skyre-bg-day': 'var(--additional-colors-skyre-bg-day)',
-        'color-additional-colors-viola-text-day': 'var(--additional-colors-viola-text-day)',
-        'color-additional-colors-viola-bg-day': 'var(--additional-colors-viola-bg-day)',
-        'color-additional-colors-syne-text-day': 'var(--additional-colors-syne-text-day)',
-        'color-additional-colors-syne-bg-day': 'var(--additional-colors-syne-bg-day)',
-        'color-additional-colors-greta-text-day': 'var(--additional-colors-greta-text-day)',
-        'color-additional-colors-greta-bg-day': 'var(--additional-colors-greta-bg-day)',
-        'color-additional-colors-grena-text-day': 'var(--additional-colors-grena-text-day)',
-        'color-additional-colors-grena-bg-day': 'var(--additional-colors-grena-bg-day)',
+        'color-notifications-success-icons-day':
+          'var(--notifications-success-icons-day)',
+        'color-notifications-success-text-day':
+          'var(--notifications-success-text-day)',
+        'color-notifications-success-bg-day':
+          'var(--notifications-success-bg-day)',
+        'color-notifications-warning-icons-day':
+          'var(--notifications-warning-icons-day)',
+        'color-notifications-warning-text-day':
+          'var(--notifications-warning-text-day)',
+        'color-notifications-warning-bg-day':
+          'var(--notifications-warning-bg-day)',
+        'color-notifications-link-text-day':
+          'var(--notifications-link-text-day)',
+        'color-additional-colors-skyre-text-day':
+          'var(--additional-colors-skyre-text-day)',
+        'color-additional-colors-skyre-bg-day':
+          'var(--additional-colors-skyre-bg-day)',
+        'color-additional-colors-viola-text-day':
+          'var(--additional-colors-viola-text-day)',
+        'color-additional-colors-viola-bg-day':
+          'var(--additional-colors-viola-bg-day)',
+        'color-additional-colors-syne-text-day':
+          'var(--additional-colors-syne-text-day)',
+        'color-additional-colors-syne-bg-day':
+          'var(--additional-colors-syne-bg-day)',
+        'color-additional-colors-greta-text-day':
+          'var(--additional-colors-greta-text-day)',
+        'color-additional-colors-greta-bg-day':
+          'var(--additional-colors-greta-bg-day)',
+        'color-additional-colors-grena-text-day':
+          'var(--additional-colors-grena-text-day)',
+        'color-additional-colors-grena-bg-day':
+          'var(--additional-colors-grena-bg-day)',
         'color-point-high': 'var(--point-high)',
         'color-point-medium': 'var(--point-medium)',
         'color-point-low': 'var(--point-low)',

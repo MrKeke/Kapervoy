@@ -1,14 +1,13 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export const Navbar: React.FC = () => {
   const [inputValue, setInputValue] = useState('')
-
   return (
-    <nav className="bg-[#1F1E1E] 2xl:text-2xl  pt-[59px] pb-[22px] w-full h-[120px] items-center justify-center flex text-[#F6DBBB] text-xs">
+    <nav className="bg-[#1F1E1E] px-[100px] pt-[59px] pb-[22px] w-full h-[120px] items-center justify-center flex text-[#F6DBBB] text-[12px]">
       <Link to="/">
         <img
-          className="mr-[27px] mb-[12px] cursor-pointer"
+          className="mr-[27px] cursor-pointer"
           src="/logo.svg"
           alt="Логотип"
         />
@@ -17,7 +16,7 @@ export const Navbar: React.FC = () => {
         <Link to="/about" className="cursor-pointer select-none">
           О нас
         </Link>
-        <a href="#" className="cursor-pointer select-none">
+        <a href="/catalog" className="cursor-pointer select-none">
           Каталог
         </a>
         <Link to="/conditions" className="cursor-pointer select-none">
@@ -52,8 +51,8 @@ export const Navbar: React.FC = () => {
           <input
             value={inputValue}
             type="text"
-            placeholder="Поиск по каталогу"
-            className={"inputFix text-[15px] bg-[#1F1E1E] w-[166px]"}
+            placeholder="Поиск"
+            className={`inputFix text-[15px] bg-[#1F1E1E] w-[166px] }`}
             onChange={(e) => {
               setInputValue(e.target.value)
             }}
